@@ -25,7 +25,8 @@ public class CreateAccount {
 	
 	@BeforeClass
 	public void setUp() throws Exception{				
-		System.setProperty("webdriver.chrome.driver", "F:\\Selenium_Jar_files\\drivers\\chromedriver_win32\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "F:\\Selenium_Jar_files\\drivers\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:\\Anjana\\Selenium_Jar_files\\drivers\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
 		driver.manage().window().maximize();		
@@ -33,7 +34,8 @@ public class CreateAccount {
 	
 	@Test
 	public void signUp() throws Exception{
-		reader = new ConfigFileReader("F:\\Selenium_Workspace\\SampleProject\\bin\\Configs\\Object_Repo.properties");		
+		//reader = new ConfigFileReader("F:\\Selenium_Workspace\\SampleProject\\bin\\Configs\\Object_Repo.properties");		
+		reader = new ConfigFileReader("F:\\Anjana\\Sel_workspace\\selenium_repo\\bin\\Configs\\Object_Repo.properties");		
 		checkValidEmail();
 		addNewUserDetails();
 		Thread.sleep(5000);
@@ -45,7 +47,8 @@ public class CreateAccount {
 	public void checkValidEmail() {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(reader.getData("a_headerSignIn")))).click();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(reader.getData("input_createEmail")))).sendKeys("anjana.2588@yahoo.in");
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(reader.getData("input_createEmail")))).sendKeys("anjana.2588@yahoo.in");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(reader.getData("input_createEmail")))).sendKeys("test.user@yahoo.in");
 		driver.findElement(By.xpath(reader.getData("btn_registerUser"))).click();
 	}
 	
@@ -54,20 +57,30 @@ public class CreateAccount {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(reader.getData("input_Gender")))).click();
 		driver.findElement(By.xpath(reader.getData("input_firstName"))).sendKeys("Test");
-		driver.findElement(By.xpath(reader.getData("input_lastName"))).sendKeys("User1");
+		driver.findElement(By.xpath(reader.getData("input_lastName"))).sendKeys("User");
 		driver.findElement(By.xpath(reader.getData("input_password"))).sendKeys("automation");
 		driver.findElement(By.xpath(reader.getData("dd_day"))).click();
 		driver.findElement(By.xpath(reader.getData("dd_month"))).click();
 		driver.findElement(By.xpath(reader.getData("dd_year"))).click();
-		
-		
-	/*	driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");
-		
-		driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");
-		driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");
-		driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");
-		driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");
-		driver.findElement(By.xpath(reader.getData(""))).sendKeys("automation");*/
+		driver.findElement(By.xpath(reader.getData("checkbx_receiveOffers"))).click();	
+		driver.findElement(By.xpath(reader.getData("input_addressFname"))).sendKeys("Test");
+		driver.findElement(By.xpath(reader.getData("input_addressLname"))).sendKeys("User");
+		driver.findElement(By.xpath(reader.getData("input_addressCompany"))).sendKeys("Chirag LLC");
+		driver.findElement(By.xpath(reader.getData("input_address1"))).sendKeys("San Mateo");
+		driver.findElement(By.xpath(reader.getData("input_address2"))).sendKeys("North Carolina");
+		driver.findElement(By.xpath(reader.getData("input_city"))).sendKeys("Los Angeles");
+		driver.findElement(By.xpath(reader.getData("dd_state"))).click();
+		driver.findElement(By.xpath(reader.getData("input_postalCode"))).sendKeys("78701");
+		driver.findElement(By.xpath(reader.getData("dd_country"))).click();
+		driver.findElement(By.xpath(reader.getData("input_mobile"))).sendKeys("9874563212");
+		driver.findElement(By.xpath(reader.getData("input_address2"))).sendKeys("US");
+		try {
+			Thread.sleep(6000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath(reader.getData("btn_submitAccount"))).click();
 		
 	}
 	
