@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57016" started-at="2019-06-23T04:06:28Z" finished-at="2019-06-23T04:07:25Z">
+  <suite name="Default suite" duration-ms="42551" started-at="2019-06-28T06:46:26Z" finished-at="2019-06-28T06:47:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57016" started-at="2019-06-23T04:06:28Z" finished-at="2019-06-23T04:07:25Z">
+    <test name="Default test" duration-ms="42551" started-at="2019-06-28T06:46:26Z" finished-at="2019-06-28T06:47:09Z">
       <class name="account.setup.CreateAccount">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="setUp" is-config="true" duration-ms="28964" started-at="2019-06-23T09:36:28Z" finished-at="2019-06-23T09:36:57Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="setUp" is-config="true" duration-ms="16149" started-at="2019-06-28T12:16:26Z" finished-at="2019-06-28T12:16:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="addNewUserDetails()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="addNewUserDetails" duration-ms="276" started-at="2019-06-23T09:36:57Z" finished-at="2019-06-23T09:36:57Z">
+        <test-method status="FAIL" signature="addNewUserDetails()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="addNewUserDetails" duration-ms="27" started-at="2019-06-28T12:16:42Z" finished-at="2019-06-28T12:16:42Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at account.setup.CreateAccount.addNewUserDetails(CreateAccount.java:58)
+	at account.setup.CreateAccount.addNewUserDetails(CreateAccount.java:56)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,11 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNewUserDetails -->
-        <test-method status="FAIL" signature="checkValidEmail()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="checkValidEmail" duration-ms="2" started-at="2019-06-23T09:36:57Z" finished-at="2019-06-23T09:36:57Z">
+        <test-method status="FAIL" signature="checkValidEmail()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="checkValidEmail" duration-ms="2" started-at="2019-06-28T12:16:42Z" finished-at="2019-06-28T12:16:42Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at account.setup.CreateAccount.checkValidEmail(CreateAccount.java:49)
+	at account.setup.CreateAccount.checkValidEmail(CreateAccount.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -81,11 +81,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkValidEmail -->
-        <test-method status="PASS" signature="signUp()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="signUp" duration-ms="27294" started-at="2019-06-23T09:36:57Z" finished-at="2019-06-23T09:37:25Z">
+        <test-method status="PASS" signature="signUp()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="signUp" duration-ms="26063" started-at="2019-06-28T12:16:42Z" finished-at="2019-06-28T12:17:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUp -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="afterTest" is-config="true" duration-ms="401" started-at="2019-06-23T09:37:25Z" finished-at="2019-06-23T09:37:25Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:account.setup.CreateAccount@3ecf72fd]" name="afterTest" is-config="true" duration-ms="265" started-at="2019-06-28T12:17:08Z" finished-at="2019-06-28T12:17:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

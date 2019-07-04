@@ -25,7 +25,10 @@ public class ConfigFileReader {
 	
 	public String getData(String elementName){
 		String data = pro.getProperty(elementName);
-		return data;
+		if (data != null){
+			return data;
+		}
+		else throw new RuntimeException("Unable to find " + data + "in the properties file.");	
 	}
 	
 	
