@@ -6,16 +6,4 @@
       <class name="account.setup.CreateAccount"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="account.setup.CreateAccount">
-        <methods>
-          <include name="setUp"/>
-          <include name="addNewUserDetails"/>
-          <include name="checkValidEmail"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- account.setup.CreateAccount -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
